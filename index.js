@@ -1,30 +1,41 @@
-const cards=document.getElementById("memoryCard");
+const cards = document.getElementsByClassName('memoryCard'); 
+
+for (let i = 0; i < cards.length; i++) { 
+cards[i].addEventListener("click", flipCard); 
+} 
+
+function flipCard() { 
+this.classList.add("flipCard"); }
+
+
+/*const cards=document.querySelectorAll('.memoryCard');
+let isFlipped = false;
+let frontFace,backFace;
 cards.addEventListener("click", flipCard);
 
 function flipCard() {
-    cards.classList.toggle("flipCard");
-}
+    this.classList.add("flipCard");
+    if(!isFlipped){
+        isFlipped=true;
+        frontFaced= this;
+        return;
+    }
+}*/
 
 
-//const cards=document.querySelectorAll(".memoryCard");
-//function flipCard(){
-   // cards.forEach((card)=>{
-     //   if (card != this){
-     //       card.classList.remove('is-flipped');
-       // }
-   // });
-   // this.classList.toggle('is-flipped');
 
-//};
-//cards.forEach((card)=>card.addEventListener("click", flipCard));
+//const cards = document.querySelectorAll('.memoryCard');
+//for(let i = 0; i < cards.length; i++){
+  //cards[i].addEventListener( 'click', function() {
+  ////cards[i].classList.toggle('is-flipped');
+//});
+//}
 
 
-//function flipCard() {
-  //  cards.forEach((card) =>{
-    //    if(card != this){
-      //      card.classList.remove('is-flipped');
-        //}
-    //});
-    //this.classList.toggle('is-flipped');
-//};
-//cards.forEach((card)=> card.addEventListener("click", flipCard));
+//const cards=document.getElementById('memoryCard');
+
+
+
+
+
+
