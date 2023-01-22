@@ -9,18 +9,24 @@ body{
 }
 
 .memoryBoard{
+    
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     height:600px;
     width: 700px;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
 }
 .memoryCard{
     width: 150px;
     height: 150px;
     margin: 5px;
     position: relative;
-   
+    transform-style:preserve-3d;
+    transition: all 0.8s ease;
+
 }
 .front-face{
     width: 100%;
@@ -28,7 +34,8 @@ body{
     padding: 20px;
     position: absolute;
     border-radius: 5px;
-    background: rgba(255, 0, 0, 0.2);
+    backface-visibility: hidden;
+    
 }
 .back-face {
     width: 100%;
@@ -36,5 +43,6 @@ body{
     padding: 20px;
     position: absolute;
     border-radius: 5px;
-    background: rgba(255, 0, 0, 0.2);
+    background: pink;
+    transform:rotateY(180deg);
   }
