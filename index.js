@@ -5,7 +5,7 @@ cards[i].addEventListener("click", flipCard);
 } 
 
 function flipCard() { 
-this.classList.add("flipCard"); }
+this.classList.toggle("flipCard"); }
 
 
 /*const cards=document.querySelectorAll('.memoryCard');
