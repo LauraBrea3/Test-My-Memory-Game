@@ -11,29 +11,36 @@ body{
 }
 
 h1{
-    color:darkred;
+    color:white;
     text-align: center;
     display: inline-block;
     margin: auto;
     width: 640px; 
-    padding: 50px;
+    padding: 50px 0px 0px 75px;
+    font-family: "Sofia", sans-serif;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px gray;
+
 }
 
 .memoryBoard{
-    
+    box-sizing: border-box;
+    background-color:#e9c4c4;
     margin: auto;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    height:600px;
+    height:700px;
     width: 700px;
-    top:50%;
-    left: 50%;
     transform:translate(-50%, -50%);
+    border-radius: 5px;
+    box-shadow:10px 10px 5px lightblue ;
 }
 .memoryCard{
     width: 150px;
     height: 150px;
-    margin: 5px;
+    margin: 10px;
+    padding-left: 3px;
     position: relative;
     transform-style:preserve-3d;
     transition: transform 1500ms;
@@ -59,7 +66,7 @@ h1{
     padding: 20px;
     position: absolute;
     border-radius: 5px;
-    background: pink;
+    background:#e0ecec;
     backface-visibility: hidden;
     
   }
