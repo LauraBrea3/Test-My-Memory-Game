@@ -2,7 +2,7 @@ const cards = document.getElementsByClassName('memoryCard');
 let isFlipped = false;
 let firstCard;
 let secondCard;
-let lockBoard = false;
+let disableBoard = false;
 
 
 for (let i = 0; i < cards.length; i++) { 
@@ -10,7 +10,7 @@ cards[i].addEventListener('click', flipCard);
 }
 
 function flipCard() { 
-  if(lockBoard)return;
+  if(disableBoard)return;
 this.classList.add('flipCard'); 
 
 if(!isFlipped){
@@ -38,12 +38,12 @@ function disableCard(){
 }
 
 function unflipCard(){
-  lockBoard= true;
+  disableBoard= true;
   setTimeout(() =>{
     firstCard.classList.remove('flipCard');
     secondCard.classList.remove('flipCard');
-    lockBoard= false;
-  }, 1500);
+    disableBoard= false;
+  }, 1000);
 }
 
 
