@@ -9,6 +9,7 @@ window.alert('Welcome! The goal is to match two cards at a time. When You have s
   console.log('restart button clicked');
 });*/
 
+//makes cards flip
 for (let i = 0; i < cards.length; i++) { 
 cards[i].addEventListener('click', flipCard); 
 }
@@ -28,7 +29,8 @@ isFlipped = false;
 
   cardMatch();
 }
-
+/*this is what checks to see if the cards match and if they do then both cards
+ are disabled and cannot be clicked again, if they don't match then they will flip back*/
 function cardMatch(){
   if(firstCard.dataset.image === secondCard.dataset.image){
     disableCard();
@@ -36,12 +38,12 @@ function cardMatch(){
   }
 unflipCard();
 }
-
+//this disables the cards once clicked and they match
 function disableCard(){
   firstCard.removeEventListener('click', flipCard);
   secondCard.removeEventListener('click',flipCard);
 }
-
+//this will unflip the cards after 1s if they don't match
 function unflipCard(){
   disableBoard= true;
   setTimeout(() =>{
