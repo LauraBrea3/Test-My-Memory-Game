@@ -1,9 +1,14 @@
 const cards = document.getElementsByClassName('memoryCard'); 
+const button = document.getElementById("restart");
 let isFlipped = false;
 let firstCard;
 let secondCard;
 let disableBoard = false;
+let gameOver = false;
 
+button.addEventListener('click', () => {
+  console.log('restart button clicked');
+});
 
 for (let i = 0; i < cards.length; i++) { 
 cards[i].addEventListener('click', flipCard); 
