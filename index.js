@@ -7,9 +7,9 @@ let disableBoard = false;
 let gameOver = false;
 window.alert('Welcome! The goal is to match two cards at a time. When You have successfully matched all cards you have won the game! Press any card to begin.')
 
-button.addEventListener('click', () => {
+/*button.addEventListener('click', () => {
   console.log('restart button clicked');
-});
+});*/
 
 for (let i = 0; i < cards.length; i++) { 
 cards[i].addEventListener('click', flipCard); 
