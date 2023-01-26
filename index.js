@@ -16,15 +16,15 @@ cards[i].addEventListener('click', flipCard);
 }
 
 function flipCard() { 
+  if(disableBoard)return;
+this.classList.add('flipCard'); 
+  
   if(!isFlipped){
     isFlipped = true;
     firstCard = this;
     return;
   }
   
-if(disableBoard)return;
-this.classList.add('flipCard'); 
-
 secondCard = this;
 isFlipped = false;
 
