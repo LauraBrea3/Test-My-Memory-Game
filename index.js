@@ -42,6 +42,7 @@ unflipCard();
 function disableCard(){
   firstCard.removeEventListener('click', flipCard);
   secondCard.removeEventListener('click',flipCard);
+  
 }
 //this will unflip the cards after 1s if they don't match
 function unflipCard(){
